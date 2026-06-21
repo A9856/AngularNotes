@@ -1,0 +1,101 @@
+<!-- <!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>AngularJS Directives Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <input type="text" ng-model="name">
+    <br><br>
+    <h2 ng-bind="name"></h2>
+    <button ng-click="changeName()">Change Name</button>
+    <hr>
+    <ul>
+        <li ng-repeat="item in fruits">{{item}}</li>
+    </ul>
+    <hr>
+    {{fruits[0]}}
+    <br>
+    {{fruits[1]}}
+    <hr>
+    <p ng-show="flag">This is Visible </p>
+    <button ng-click="toggle()"> Toggle</button>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function ($scope)
+        {
+            $scope.name = "Ashish";
+            $scope.fruits =
+            [
+                "Apple",
+                "Mango",
+                "Banana"
+            ];
+            $scope.flag = true;
+            $scope.changeName = function ()
+            {
+                $scope.name = "Kumar";
+            };
+            $scope.toggle = function ()
+            {
+                $scope.flag = !$scope.flag;
+            };
+        });
+    </script>
+
+</body>
+</html> -->
+
+<!-- WITH DI -->
+
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <h2>{{name}}</h2>
+    <h2>{{student.city}}</h2>
+    <h2>{{subjects[2]}}</h2>
+    <button ng-click="showMsg()">Click</button>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl",
+            function ($scope) {
+                $scope.name = "Ashish Kumar";
+
+                $scope.student =
+                {
+                    city: "Kanpur",
+                    age: 20
+                };
+                $scope.subjects =
+                    [
+                        "HTML",
+                        "CSS",
+                        "JavaScript"
+                    ];
+                $scope.showMsg = function () {
+                    alert("Hello Ashish");
+                };
+            });
+    </script>
+</body>
+</html>
+
+<!-- WITHOUT DI-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Without DI</title>
+</head>
+<body>
+    <h2 id="demo"></h2>
+    <script>
+        var name = "Ashish Kumar";
+        document.getElementById("demo").innerHTML = name;
+    </script>
+</body>
+</html>

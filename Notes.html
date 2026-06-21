@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        AngularJS क्या है?
+
+        AngularJS एक Open Source JavaScript Framework है जिसका उपयोग Dynamic Web Application और Single Page Application (SPA) बनाने के लिए किया जाता है।
+        Developed By: Google
+        Released: 2010
+        Purpose: Web Page को Dynamic और Interactive बनाना।
+
+        AngularJS की विशेषताएँ--:
+            Open Source Framework
+            Single Page Application (SPA) बनाता है
+            Two Way Data Binding प्रदान करता है
+            MVC Architecture को Support करता है
+            Directives प्रदान करता है
+            Dependency Injection Support करता है
+            Testing आसान बनाता है
+            AngularJS जोड़ने का तरीका
+
+            HTML Page में AngularJS Library जोड़ने के लिए Script Tag का उपयोग करते हैं।
+
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+            Directive क्या है?
+            Directive AngularJS का विशेष Attribute होता है जो HTML Element को अतिरिक्त Functionality प्रदान करता है।
+            AngularJS के सभी Directive सामान्यतः ng- से शुरू होते हैं।
+
+            ng-app Directive--:
+            ng-app AngularJS Application की शुरुआत (Starting Point) को Define करता है।
+            AngularJS सबसे पहले ng-app खोजता है और वहीं से Application शुरू करता है।
+
+            Syntax
+            <!DOCTYPE html>
+            <html ng-app="">
+            <body>
+
+            {{5+5}}
+
+            </body>
+            </html>
+
+            ng-model Directive--:
+            ng-model HTML Input Control को AngularJS Variable से जोड़ता है।यह Two-Way Data Binding का कार्य करता है।
+
+            Example
+            <!DOCTYPE html>
+            <html ng-app="">
+            <body>
+            Name :
+            <input type="text" ng-model="username">
+            <br><br>
+            Your Name :
+            {{username}}
+            </body>
+            </html>
+
+            ng-bind Directive--:
+            ng-bind Variable की Value को HTML Element में Display करता है।
+
+            Syntax
+            <p ng-bind="name"></p>
+            Example
+            <!DOCTYPE html>
+            <html ng-app="">
+            <body>
+
+            <input type="text" ng-model="name">
+
+            <h2 ng-bind="name"></h2>
+
+            </body>
+            </html>
+        
+            User जो लिखेगा वही दिखाई देगा
+
+            ng-model और ng-bind में अंतर
+
+            ng-model--: Input Field को Variable से जोड़ता है।
+            <input type="text" ng-model="name">
+
+            ng-bind--: Variable की Value Display करता है।
+            <p ng-bind="name"></p>
+
+            AngularJS Expression--:Double Curly Braces {{ }} के अंदर लिखे गए Statement को Expression कहते हैं।
+
+            Example
+            {{10+20}}
+
+            String Example
+            {{"Adil"+" Khan"}}
+            
+            ng-init Directive--:ng-init Variable को Initial Value देने के लिए उपयोग किया जाता है।
+
+            Example
+            <div ng-init="color='Yellow'">
+            {{color}}
+            </div>
+
+            Object in AngularJS--:Object कई Values को Key और Value के रूप में Store करता है।
+
+            Example
+            <div ng-init="
+            person={
+            name:'Adil',
+            city:'Kanpur',
+            age:20
+            }">
+        
+            {{person.name}}
+            {{person.city}}
+            {{person.age}}
+    
+            Array in AngularJS--:Array समान प्रकार के Data का Collection होता है।Array का Index हमेशा 0 से शुरू होता है।
+
+            Example
+            <div ng-init="
+            student=['Ali','Adil','Khan']
+            ">
+            {{student[0]}}
+            <br>
+            {{student[1]}}
+            <br>
+            {{student[2]}}
+            </div>
+
+            Controller--:Controller AngularJS Application का Logic संभालता है।Controller Data और Business Logic को Manage करता है।
+
+            Example
+            app.controller(
+            "myCtrl",
+            function($scope)
+            {
+            $scope.name="Adil";
+            });
+
+            Scope--:Scope Controller और View के बीच Connection का कार्य करता है।
+            $scope AngularJS का एक Special Object है जो Controller और View के बीच Data एवं Functions को Share करने का कार्य करता है।
+            Scope Data को Controller से HTML तक पहुँचाता है।
+
+            Example
+            $scope.name="Adil";
+            HTML
+            {{name}}
+     
+            Data Binding--:Model और View के बीच Data का Automatic Synchronization Data Binding कहलाता है।
+
+            Example
+            <input type="text" ng-model="name">
+
+            {{name}}
+            User जो Input करेगा वही तुरंत Display होगा।
+            इसे Two-Way Data Binding कहते हैं।
+
+            Filter--:Filter का उपयोग Data को Format करने के लिए किया जाता है।
+
+            Uppercase Filter
+            {{"adil"|uppercase}}
+
+            Lowercase Filter
+            {{"ADIL"|lowercase}}
+
+            Currency Filter
+            {{5000|currency}}
+           
+            Service--:Service Reusable Code होता है जिसका उपयोग Application के कई भागों में किया जा सकता है।
+
+            Built-in Services
+            $http
+            $timeout
+            $interval
+            $location
+           
+            Testing--:AngularJS Application में Errors खोजने और Code Verify करने की प्रक्रिया Testing कहलाती है।
+
+            Testing Tools
+            Jasmine
+            Karma
+            Protractor
+
+            Important Interview 
+        
+            AngularJS क्या है?
+            AngularJS एक Open Source JavaScript Framework है जिसका उपयोग Dynamic Web Applications बनाने के लिए किया जाता है।
+
+            Directive क्या है?
+            Directive AngularJS का विशेष Attribute होता है जो HTML को अतिरिक्त Functionality प्रदान करता है।
+
+            ng-app क्या है?
+            AngularJS Application की शुरुआत को Define करता है।
+
+            ng-model क्या है?
+            HTML Control को Variable से Bind करता है।
+
+            ng-bind क्या है?
+            Variable की Value को HTML में Display करता है।
+
+            ng-init क्या है?
+            Variable को Initial Value प्रदान करता है।
+
+            Scope क्या है?
+            Controller और View के बीच Data Share करने का माध्यम Scope कहलाता है।
+
+            Controller क्या है?
+            Application Logic को Handle करने वाला Component Controller कहलाता है।
+
+            Data Binding क्या है?
+            Model और View के बीच Data Synchronization की प्रक्रिया Data Binding कहलाती है।
+
+            Filter क्या है?
+            Data को Format करने के लिए Filter का उपयोग किया जाता है।
+
+            Service क्या है?
+            Reusable Business Logic को Service कहा जाता है।
+    </pre>
+</body>
+
+</html>
