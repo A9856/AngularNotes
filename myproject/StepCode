@@ -1,0 +1,13 @@
+create html file . file name FormValidation.html aur usme html css code likho javascript ke liye new file bnao validator-standalone.js usme page number 369 ka code likho aur us file ko same html file location pr rkh validator-standalone.js isi name se save kro aur html me link script tag se link kro body me then html file ko double click krk browser me run krk dekho
+
+<!-- Package Manager: Ek software tool jo packages aur dependencies ko install, update aur manage karta hai. NPM (Node Package Manager) Node.js ka default package manager hai aur JavaScript projects me packages manage karne ke liye use kiya jata hai.
+
+npm create vite@latest my-app -- --template react
+cd my-app
+npm install
+npm run dev -->
+
+<!-- npm install bootstrap
+npm install axios
+npm install react-router-dom
+npm install @reduxjs/toolkit react-redux -->
