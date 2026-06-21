@@ -1,0 +1,11 @@
+Package Manager: Ek software tool jo packages aur dependencies ko install, update aur manage karta hai. NPM (Node Package Manager) Node.js ka default package manager hai aur JavaScript projects me packages manage karne ke liye use kiya jata hai.
+
+npm create vite@latest my-app -- --template react
+cd my-app
+npm install
+npm run dev
+
+<!-- npm install bootstrap
+npm install axios
+npm install react-router-dom
+npm install @reduxjs/toolkit react-redux -->
