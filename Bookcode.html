@@ -2,35 +2,33 @@
 <html ng-app="myApp">
 <head>
     <script>
-        function funcall(){
-            var x=document.forms["myform"]["fname"].value; //page ke form ka collection 
-            if (x==""){
-                alert("Name must be filled out");
-                return false;
-            }
-            else
-            document.write("Your data successfully submitted");
-        }
-        // function validate(form) {
-        //     var x = form["username"].value;
-
-        //     alert(x);
-
-        //     return false;
+        // function funcall(){
+        //     var x=document.forms["myform"]["fname"].value; //page ke form ka collection 
+        //     if (x==""){
+        //         alert("Name must be filled out");
+        //         return false;
+        //     }
+        //     else
+        //     document.write("Your data successfully submitted");
         // }
+        function validate(form) {
+            var x = form["username"].value;
+            alert(x);
+            return false;
+        }
     </script>
 </head>
 <body>
     <h4>Pleas Fill Your Data..</h4>
-     <form name="myform"action="/actionPage.php" onsubmit="funcall()"method="post">
+     <!-- <form name="myform"action="/actionPage.php" onsubmit="funcall()"method="post">
         Enter Your Name : <input name="fname">
         <br>
         <br>
         <input type="submit"value="submit">
-    </form>
+    </form> -->
     
     <!-- form name different hu but input name same hu toh function bnakr this ka use krk genric function bnaya ja skta hai -->
-    <!-- <form name="myform" onsubmit="return validate(this)">
+    <form name="myform" onsubmit="return validate(this)">
         <input type="text" name="username">
         <input type="submit">
     </form>
@@ -38,5 +36,5 @@
     <form name="myform2" onsubmit="return validate(this)">
         <input type="text" name="username">
         <input type="submit">
-    </form> -->
+    </form>
 </body>
