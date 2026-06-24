@@ -1,0 +1,192 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="">
+        <p>My First Expression : {{10*10}}</p>
+    </div>
+</body>
+</html>
+ -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AngularJS Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="" ng-init="mycol='yellow'">
+
+    <input type="text"
+           ng-model="mycol"
+           ng-style="{'background-color': mycol}">
+
+</div>
+
+</body>
+</html> -->
+
+<!-- input bg color and txt color change -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="" ng-init="bg='yellow'; txt='red'">
+
+    Background Color:
+    <input type="text" ng-model="bg"><br><br>
+
+    Text Color:
+    <input type="text" ng-model="txt"><br><br>
+
+    <input type="text"
+        value="Angular"
+           ng-style="{
+             'background-color': bg,
+             'color': txt
+           }">
+
+</div>
+
+</body>
+</html> -->
+
+<!-- full backgroundcolor change -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="" ng-init="bg='lightblue';txt='red'"
+      ng-style="{'background-color': bg,'color':txt}">
+
+    Enter Color:
+    <input type="text" ng-model="bg"><br><br><br>
+
+    Enter Text Color: 
+    <input type="text" ng-model="txt">
+
+    <h1>Hello AngularJS</h1>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app=""ng-init="productQty=2;productprice=12000">
+        <p>Product Samsung A30 , Qty=2 , Price = 12000</p>
+        <p>Total Amount Paid : <Span ng-bind=" productQty*productprice"></Span></p>
+    </div>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app=""ng-init="FirstName='Amit';MidName='Kumar';Designation='Full Stack Developer'">
+
+       <p ng-bind="FirstName + ' ' + MidName + ' ' + Designation"></p>
+    </div>
+</body>
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="">
+        FirstName:<input type="text" ng-model="fname"><br><br>
+        MidName:<input type="text" ng-model="mname"><br><br>
+
+        LastName:<input type="text" ng-model="lname"><br><br>
+
+        <span ng-bind="fname + ' '+ mname + ' ' +lname"></span>
+
+    </div>
+</body>
+
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app=""ng-init="person={FirstName:'Amit',MidName:'Kumar',Designation:'Full Stack Developer'}">
+
+       <p ng-bind="person.FirstName"></p>
+    </div>
+</body>
+
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="" ng-init="Array=[1,12,23,43,45,23,54,34,56,65]">
+
+        <p>The Value access by Indexing : {{Array[5]}}</p>
+        <p>The Value access by Indexing : {{Array.slice(0,7)}}</p>
+        <p>Slice(0,3) : {{Array.slice(0,3)}}</p>
+
+        <p>Slice(2,6) : {{Array.slice(2,6)}}</p>
+    </div>
+</body>
+
+</html> -->
+
+<!-- array.splice(startIndex, deleteCount) -->
+ <!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="" ng-init="arr=[10,20,30,40,50]">
+
+    <p>Removed Elements: {{arr.splice(1,2)}}</p>
+    <p>2 index start 0 element delete 100 insert:  arr.splice(2,0,100)</p>
+    <p>2 index start 1 element remove 100 insert arr.splice(2,1,100)</p>
+    <!-- slice not change original array but splice change original array -->
+</div>
+</body>
+</html>
